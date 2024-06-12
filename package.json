@@ -4,7 +4,6 @@
     "start": "tsx watch index.ts"
   },
   "devDependencies": {
-    "@types/node": "^20.14.2",
     "tsx": "^4.15.2"
   },
   "engines": {

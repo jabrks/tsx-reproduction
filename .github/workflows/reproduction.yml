@@ -15,11 +15,11 @@ jobs:
           node-version: 20
       - name: Set up Homebrew
         uses: Homebrew/actions/setup-homebrew@master
+      - name: Install Coreutils
+        run: brew install coreutils
       - name: Install Dependencies
         run: npm ci
       - name: Reproduction
         continue-on-error: true
         shell: bash
-        run: |-
-          brew install coreutils
-          timeout --preserve-status -s INT 3 npm start
+        run: timeout --preserve-status -s INT 3 npm start
