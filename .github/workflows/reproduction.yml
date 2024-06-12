@@ -16,4 +16,6 @@ jobs:
       - name: Install Dependencies
         run: npm ci
       - name: Reproduction
-        run: timeout --preserve-status -s INT 3 npm start
+        run: |-
+          set +e
+          timeout --preserve-status -s INT 3 npm start
