@@ -1,0 +1,12 @@
+{
+  "name": "tsx-reproduction",
+  "scripts": {
+    "start": "tsx watch index.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.15.2"
+  },
+  "engines": {
+    "npm": ">=10.3.0"
+  }
+}
