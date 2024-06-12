@@ -3,8 +3,4 @@ const run = () => {
   setTimeout(run, 1000);
 };
 
-process.on('SIGINT', (signal) => {
-  console.log(signal);
-});
-
 run();
