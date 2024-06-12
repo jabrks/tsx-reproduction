@@ -5,7 +5,7 @@ on:
       - main
 jobs:
   reproduction:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -18,4 +18,6 @@ jobs:
       - name: Reproduction
         continue-on-error: true
         shell: bash
-        run: timeout --preserve-status -s INT 3 npm start
+        run: |-
+          npm -v
+          timeout --preserve-status -s INT 3 npm start
